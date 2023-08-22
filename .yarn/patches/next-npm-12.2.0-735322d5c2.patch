@@ -1,0 +1,54 @@
+diff --git a/dist/build/index.js b/dist/build/index.js
+index 1902613462742ba112ce35eb83a6175ed7124429..7502ea1c1fba56692c686553176301db3880f013 100755
+--- a/dist/build/index.js
++++ b/dist/build/index.js
+@@ -820,6 +820,7 @@ async function build(dir, conf = null, reactProductionProfiling = false, debugOu
+                     const serverResult = await nodeFileTrace(toTrace, {
+                         base: root,
+                         processCwd: dir,
++                        resolve: config.experimental.fileTraceResolve,
+                         ignore: [
+                             "**/next/dist/pages/**/*",
+                             "**/next/dist/compiled/webpack/(bundle4|bundle5).js",
+diff --git a/dist/build/webpack/plugins/next-trace-entrypoints-plugin.js b/dist/build/webpack/plugins/next-trace-entrypoints-plugin.js
+index f0f462f8e2774a3f027ff2db0dca6194cc6c47de..69da5fdd4014ef04426b9ecda7e4cd2fc9b5ef0f 100755
+--- a/dist/build/webpack/plugins/next-trace-entrypoints-plugin.js
++++ b/dist/build/webpack/plugins/next-trace-entrypoints-plugin.js
+@@ -57,13 +57,14 @@ function getFilesMapFromReasons(fileList, reasons, ignoreFn) {
+     return parentFilesMap;
+ }
+ class TraceEntryPointsPlugin {
+-    constructor({ appDir , excludeFiles , esmExternals , staticImageImports , outputFileTracingRoot  }){
++    constructor({ appDir , excludeFiles , esmExternals , staticImageImports , outputFileTracingRoot, fileTraceResolve  }){
+         this.appDir = appDir;
+         this.entryTraces = new Map();
+         this.esmExternals = esmExternals;
+         this.excludeFiles = excludeFiles || [];
+         this.staticImageImports = staticImageImports;
+         this.tracingRoot = outputFileTracingRoot || appDir;
++        this.fileTraceResolve = fileTraceResolve;
+     }
+     // Here we output all traced assets and webpack chunks to a
+     // ${page}.js.nft.json file
+@@ -98,6 +99,7 @@ class TraceEntryPointsPlugin {
+             ], {
+                 base: this.tracingRoot,
+                 processCwd: this.appDir,
++                resolve: this.fileTraceResolve,
+                 readFile: async (path)=>{
+                     if (chunksToTrace.has(path)) {
+                         var ref;
+diff --git a/dist/build/webpack-config.js b/dist/build/webpack-config.js
+index f9cab03b74411376898fbf5bd14c187236d9ad1b..fc05e4d90cec72e7365bf46e77d5a5f65da44ee6 100755
+--- a/dist/build/webpack-config.js
++++ b/dist/build/webpack-config.js
+@@ -942,7 +942,8 @@ async function getBaseWebpackConfig(dir, { buildId , config , compilerType , dev
+                 appDir: dir,
+                 esmExternals: config.experimental.esmExternals,
+                 staticImageImports: !config.images.disableStaticImages,
+-                outputFileTracingRoot: config.experimental.outputFileTracingRoot
++                outputFileTracingRoot: config.experimental.outputFileTracingRoot,
++                fileTraceResolve: config.experimental.fileTraceResolve
+             }),
+             // Moment.js is an extremely popular library that bundles large locale files
+             // by default due to how Webpack interprets its code. This is a practical

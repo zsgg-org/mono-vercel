@@ -1,0 +1,14 @@
+#!/bin/sh
+BRANCH_NAME=$(git branch --show-current)
+echo -e "git $BRANCH_NAME\n"
+
+# [소프트웨어 버전관리, 개발 환경 – DSP and Multimedia](http://dsparch.sciomagelab.com/2021/10/08/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4-%EB%B2%84%EC%A0%84%EA%B4%80%EB%A6%AC-%EA%B0%9C%EB%B0%9C-%ED%99%98%EA%B2%BD/)
+# nightly, RC
+BRANCH_REGEX=".*-(canary|beta|alpha)(\.[0-9])?"
+if [[ $BRANCH_NAME =~ $BRANCH_REGEX ]];
+then
+    echo "BRANCH '$BRANCH_NAME' matches BRANCH_REGEX '$BRANCH_REGEX'"
+else
+    echo "BRANCH '$BRANCH_NAME' DOES NOT MATCH BRANCH_REGEX '$BRANCH_REGEX'"
+#    yarn run husky:pre-push:check
+fi

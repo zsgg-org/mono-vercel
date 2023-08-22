@@ -1,0 +1,86 @@
+{
+  "workspaces": [
+    "app/**/*",
+    "app-run/**/*",
+    "package/**/*",
+    "package-hello/**/*",
+    "package-playground/**/*",
+    "package-recipe/**/*",
+    "package-export/**/*",
+    "package-try/**/*",
+    ".github/actions/**/*"
+  ],
+  "scripts": {
+    "_:package:update": "yarn upgrade-interactive",
+    "_:remove-node_modules": "find . -name \"node_modules\" -type d -prune -exec rm -rf '{}' +",
+    "lint-es": "eslint --fix . --ext .js --ext .ts --ext .tsx --ext .json",
+    "postinstall": "husky install && chmod ug+x .husky/*",
+    "husky:pre-push:check": "yarn workspaces foreach -vt run husky:pre-push:check",
+    "---github CI---": "",
+    "_github:changed": "yarn workspaces since list origin/main",
+    "_github:test": "yarn workspaces since run github:test origin/main",
+    "_github:test-type": "yarn workspaces since run github:test-type origin/main",
+    "_github:check-type": "yarn workspaces since run github:check-type origin/main",
+    "_github:check-eslint": "yarn workspaces since run github:check-eslint origin/main",
+    "_github:check-style": "yarn workspaces since run github:check-style origin/main",
+    "github:changed": "yarn workspaces since list $GH_SINCE_FROM",
+    "github:test": "yarn workspaces since run --jobs $GH_SINCE_JOBS github:test $GH_SINCE_FROM",
+    "github:test-type": "yarn workspaces since run --jobs $GH_SINCE_JOBS github:test-type $GH_SINCE_FROM",
+    "github:check-type": "yarn workspaces since run --jobs $GH_SINCE_JOBS github:check-type $GH_SINCE_FROM",
+    "github:check-eslint": "git diff $GH_SINCE_FROM --name-only --diff-filter AMRC -- **/*.{ts,tsx,js} | xargs yarn eslint",
+    "github:check-style": "yarn workspaces since run --jobs $GH_SINCE_JOBS github:check-style $GH_SINCE_FROM"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.22.10",
+    "@emotion/react": "^11.11.1",
+    "@tanstack/react-query": "^4.32.6",
+    "@tanstack/react-query-devtools": "^4.32.6",
+    "encoding": "^0.1.13",
+    "react": "^18.2.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^8.47.0",
+    "@octokit/core": "^4.2.4",
+    "@types/jest": "^29.5.3",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vitest/coverage-c8": "^0.33.0",
+    "core-js": "^3.32.0",
+    "eslint": "8.47.0",
+    "eslint-config-next": "^13.4.16",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-import-resolver-node": "^0.3.9",
+    "eslint-import-resolver-typescript": "^3.6.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-jest": "^27.2.3",
+    "eslint-plugin-jest-dom": "^5.0.2",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.33.1",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sort-keys-fix": "^1.1.2",
+    "eslint-plugin-testing-library": "^6.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.2",
+    "prettier": "^3.0.2",
+    "ts-node": "^10.9.1",
+    "typescript": "5.1.6"
+  },
+  "resolutions": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@types/react": "^18.2.8",
+    "@types/react-dom": "^18.2.4"
+  },
+  "packageManager": "yarn@3.6.0",
+  "dependenciesMeta": {
+    "cdk-nextjs-standalone@4.0.0": {
+      "unplugged": true
+    },
+    "next@13.4.16": {
+      "unplugged": true
+    }
+  }
+}

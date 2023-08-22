@@ -1,0 +1,3 @@
+<component name="DependencyValidationManager">
+  <scope name="play-nextv13-ssr" pattern="file[mono]:package-playground/playground--nextv13-aws-ssr/playground--nextv13-aws-ssr-app//*" />
+</component>
