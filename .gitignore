@@ -40,3 +40,4 @@ test-results
 #!.yarn/unplugged
 #!.yarn/unplugged/**/*/dist
 .DS_Store
+.vercel

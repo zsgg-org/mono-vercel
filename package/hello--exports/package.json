@@ -1,0 +1,4 @@
+{
+  "name": "hello--exports",
+  "main": "src/index.ts"
+}

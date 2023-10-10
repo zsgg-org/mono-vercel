@@ -26,11 +26,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       {\
         "name": "try--next-blog-starter",\
         "reference": "workspace:package-try/try--next-blog-starter"\
+      },\
+      {\
+        "name": "hello--exports",\
+        "reference": "workspace:package/hello--exports"\
       }\
     ],\
     "enableTopLevelFallback": true,\
     "ignorePatternData": "(^(?:\\\\.yarn\\\\/sdks(?:\\\\/(?!\\\\.{1,2}(?:\\\\/|$))(?:(?:(?!(?:^|\\\\/)\\\\.{1,2}(?:\\\\/|$)).)*?)|$))$)",\
     "fallbackExclusionList": [\
+      ["hello--exports", ["workspace:package/hello--exports"]],\
       ["root-workspace-0b6124", ["workspace:."]],\
       ["try--next-appdir-322e97", ["workspace:package-try/try--next-appdir"]],\
       ["try--next-basic", ["workspace:package-try/try--next-basic"]],\
@@ -10841,6 +10846,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["hello--exports", [\
+        ["workspace:package/hello--exports", {\
+          "packageLocation": "./package/hello--exports/",\
+          "packageDependencies": [\
+            ["hello--exports", "workspace:package/hello--exports"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
       ["hoist-non-react-statics", [\
         ["npm:3.3.2", {\
           "packageLocation": "./.yarn/cache/hoist-non-react-statics-npm-3.3.2-e7b709e6c1-b153827042.zip/node_modules/hoist-non-react-statics/",\
@@ -16901,6 +16915,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["autoprefixer", "virtual:2addf9f9dedeafbbdb79085b6b8f6dfb9c2a4f5ae3c99b26f8c28852b4c0b56550e7bd44f168b203af0980127c2d9542243121d70257cb04604419d61903662f#npm:10.4.15"],\
             ["eslint", "npm:8.47.0"],\
             ["eslint-config-next", "virtual:2addf9f9dedeafbbdb79085b6b8f6dfb9c2a4f5ae3c99b26f8c28852b4c0b56550e7bd44f168b203af0980127c2d9542243121d70257cb04604419d61903662f#npm:13.4.19"],\
+            ["hello--exports", "workspace:package/hello--exports"],\
             ["next", "virtual:2addf9f9dedeafbbdb79085b6b8f6dfb9c2a4f5ae3c99b26f8c28852b4c0b56550e7bd44f168b203af0980127c2d9542243121d70257cb04604419d61903662f#npm:13.4.19"],\
             ["postcss", "npm:8.4.28"],\
             ["react", "npm:18.2.0"],\
