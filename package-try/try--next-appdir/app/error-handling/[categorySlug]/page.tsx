@@ -2,18 +2,12 @@ import { getCategory } from '#/app/api/categories/getCategories';
 import BuggyButton from '#/ui/buggy-button';
 import { SkeletonCard } from '#/ui/skeleton-card';
 
-export default async function Page({
-  params,
-}: {
-  params: { categorySlug: string };
-}) {
+export default async function Page({ params }: { params: { categorySlug: string } }) {
   const category = await getCategory({ slug: params.categorySlug });
 
   return (
     <div className="space-y-4">
-      <h1 className="text-xl font-medium text-gray-400/80">
-        All {category.name}
-      </h1>
+      <h1 className="text-xl font-medium text-gray-400/80">All {category.name}</h1>
 
       <BuggyButton />
 

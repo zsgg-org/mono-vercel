@@ -1,24 +1,14 @@
 import { Product } from '#/app/api/products/product';
 import { ProductCard } from '#/ui/product-card';
 
-export async function RecommendedProducts({
-  path,
-  data,
-}: {
-  path: string;
-  data: Promise<Response>;
-}) {
+export async function RecommendedProducts({ path, data }: { path: string; data: Promise<Response> }) {
   const products = (await data.then((res) => res.json())) as Product[];
 
   return (
     <div className="space-y-6">
       <div>
-        <div className="text-lg font-medium text-white">
-          Recommended Products for You
-        </div>
-        <div className="text-sm text-gray-400">
-          Based on your preferences and shopping habits
-        </div>
+        <div className="text-lg font-medium text-white">Recommended Products for You</div>
+        <div className="text-sm text-gray-400">Based on your preferences and shopping habits</div>
       </div>
       <div className="grid grid-cols-4 gap-6">
         {products.map((product) => (

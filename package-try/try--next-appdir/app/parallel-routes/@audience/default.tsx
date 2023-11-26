@@ -9,8 +9,7 @@ export default function Default() {
         <h2 className="text-lg font-bold">Default UI</h2>
 
         <p>
-          Default UI is rendered because the <code>@audience</code> slot{' '}
-          <strong>does not</strong> contain a route segment that matches the
+          Default UI is rendered because the <code>@audience</code> slot <strong>does not</strong> contain a route segment that matches the
           current{' '}
           <code>
             /<CurrentRoute slice={1} />

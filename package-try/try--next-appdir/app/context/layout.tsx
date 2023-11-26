@@ -15,30 +15,13 @@ export const metadata = {
   title,
 };
 
-export default async function Layout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function Layout({ children }: { children: React.ReactNode }) {
   const categories = await getCategories();
   return (
-    <Boundary
-      labels={['Server Component Boundary']}
-      size="small"
-      animateRerendering={false}
-    >
-      <Boundary
-        labels={['Counter Context Provider [Client Component]']}
-        color="blue"
-        size="small"
-        animateRerendering={false}
-      >
+    <Boundary labels={['Server Component Boundary']} size="small" animateRerendering={false}>
+      <Boundary labels={['Counter Context Provider [Client Component]']} color="blue" size="small" animateRerendering={false}>
         <CounterProvider>
-          <Boundary
-            labels={['Server Component Boundary']}
-            size="small"
-            animateRerendering={false}
-          >
+          <Boundary labels={['Server Component Boundary']} size="small" animateRerendering={false}>
             <div className="space-y-9">
               <div className="flex justify-between">
                 <TabGroup

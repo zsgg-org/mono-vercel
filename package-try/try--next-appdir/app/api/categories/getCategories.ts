@@ -8,11 +8,7 @@ import type { Category } from './category';
 import 'server-only';
 
 export async function getCategories({ parent }: { parent?: string } = {}) {
-  const res = await fetch(
-    `https://app-router-api.vercel.app/api/categories${
-      parent ? `?parent=${parent}` : ''
-    }`,
-  );
+  const res = await fetch(`https://app-router-api.vercel.app/api/categories${parent ? `?parent=${parent}` : ''}`);
 
   if (!res.ok) {
     // Render the closest `error.js` Error Boundary
@@ -30,11 +26,7 @@ export async function getCategories({ parent }: { parent?: string } = {}) {
 }
 
 export async function getCategory({ slug }: { slug: string }) {
-  const res = await fetch(
-    `https://app-router-api.vercel.app/api/categories${
-      slug ? `?slug=${slug}` : ''
-    }`,
-  );
+  const res = await fetch(`https://app-router-api.vercel.app/api/categories${slug ? `?slug=${slug}` : ''}`);
 
   if (!res.ok) {
     // Render the closest `error.js` Error Boundary

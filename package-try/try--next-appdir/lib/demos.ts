@@ -28,8 +28,7 @@ export const demos: { name: string; items: Item[] }[] = [
   {
     items: [
       {
-        description:
-          'Create meaningful Loading UI for specific parts of an app',
+        description: 'Create meaningful Loading UI for specific parts of an app',
         name: 'Loading',
         slug: 'loading',
       },
@@ -49,14 +48,12 @@ export const demos: { name: string; items: Item[] }[] = [
   {
     items: [
       {
-        description:
-          'Streaming data fetching from the server with React Suspense',
+        description: 'Streaming data fetching from the server with React Suspense',
         name: 'Streaming with Suspense',
         slug: 'streaming',
       },
       {
-        description:
-          'Streaming data fetching from the server with React Suspense',
+        description: 'Streaming data fetching from the server with React Suspense',
         name: 'Streaming with Suspense Cache',
         slug: 'streaming-cache',
       },
@@ -81,8 +78,7 @@ export const demos: { name: string; items: Item[] }[] = [
   {
     items: [
       {
-        description:
-          'Pass context between Client Components that cross Server/Client Component boundary',
+        description: 'Pass context between Client Components that cross Server/Client Component boundary',
         name: 'Client Context',
         slug: 'context',
       },

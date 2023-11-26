@@ -2,11 +2,7 @@ import colors from 'tailwindcss/colors';
 import { Config } from 'tailwindcss';
 
 export default {
-  content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './ui/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./app/**/*.{js,ts,jsx,tsx,mdx}', './pages/**/*.{js,ts,jsx,tsx,mdx}', './ui/**/*.{js,ts,jsx,tsx,mdx}'],
   darkMode: 'class',
   future: {
     hoverOnlyWhenSupported: true,
@@ -15,9 +11,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: ({ theme }) => ({
-        'vc-border-gradient': `radial-gradient(at left top, ${theme(
-          'colors.gray.500',
-        )}, 50px, ${theme('colors.gray.800')} 50%)`,
+        'vc-border-gradient': `radial-gradient(at left top, ${theme('colors.gray.500')}, 50px, ${theme('colors.gray.800')} 50%)`,
       }),
       // https://vercel.com/design/color
       colors: {

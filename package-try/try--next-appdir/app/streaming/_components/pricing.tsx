@@ -13,15 +13,9 @@ function LoadingDots() {
   return (
     <div className="text-sm">
       <span className="space-x-0.5">
-        <span className="inline-flex animate-[loading_1.4s_ease-in-out_infinite] rounded-full">
-          &bull;
-        </span>
-        <span className="inline-flex animate-[loading_1.4s_ease-in-out_0.2s_infinite] rounded-full">
-          &bull;
-        </span>
-        <span className="inline-flex animate-[loading_1.4s_ease-in-out_0.4s_infinite] rounded-full">
-          &bull;
-        </span>
+        <span className="inline-flex animate-[loading_1.4s_ease-in-out_infinite] rounded-full">&bull;</span>
+        <span className="inline-flex animate-[loading_1.4s_ease-in-out_0.2s_infinite] rounded-full">&bull;</span>
+        <span className="inline-flex animate-[loading_1.4s_ease-in-out_0.4s_infinite] rounded-full">&bull;</span>
       </span>
     </div>
   );
@@ -44,24 +38,14 @@ async function UserSpecificDetails({ productId }: { productId: string }) {
   return (
     <>
       <ProductSplitPayments price={price} />
-      {product.usedPrice ? (
-        <ProductUsedPrice usedPrice={product.usedPrice} />
-      ) : null}
+      {product.usedPrice ? <ProductUsedPrice usedPrice={product.usedPrice} /> : null}
       <ProductEstimatedArrival leadTime={product.leadTime} hasDeliveryTime />
-      {product.stock <= 1 ? (
-        <ProductLowStockWarning stock={product.stock} />
-      ) : null}
+      {product.stock <= 1 ? <ProductLowStockWarning stock={product.stock} /> : null}
     </>
   );
 }
 
-export function Pricing({
-  product,
-  cartCount,
-}: {
-  product: Product;
-  cartCount: string;
-}) {
+export function Pricing({ product, cartCount }: { product: Product; cartCount: string }) {
   const price = dinero(product.price as DineroSnapshot<number>);
 
   return (

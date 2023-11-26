@@ -9,13 +9,7 @@ import { dinero, type DineroSnapshot } from 'dinero.js';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const ProductCard = ({
-  product,
-  href,
-}: {
-  product: Product;
-  href: string;
-}) => {
+export const ProductCard = ({ product, href }: { product: Product; href: string }) => {
   const price = dinero(product.price as DineroSnapshot<number>);
 
   return (
@@ -38,9 +32,7 @@ export const ProductCard = ({
           />
         </div>
 
-        <div className="group-hover:text-vercel-cyan truncate text-sm font-medium text-white">
-          {product.name}
-        </div>
+        <div className="group-hover:text-vercel-cyan truncate text-sm font-medium text-white">{product.name}</div>
 
         {product.rating ? <ProductRating rating={product.rating} /> : null}
 
@@ -48,15 +40,11 @@ export const ProductCard = ({
 
         {/* <ProductSplitPayments price={price} /> */}
 
-        {product.usedPrice ? (
-          <ProductUsedPrice usedPrice={product.usedPrice} />
-        ) : null}
+        {product.usedPrice ? <ProductUsedPrice usedPrice={product.usedPrice} /> : null}
 
         <ProductEstimatedArrival leadTime={product.leadTime} />
 
-        {product.stock <= 1 ? (
-          <ProductLowStockWarning stock={product.stock} />
-        ) : null}
+        {product.stock <= 1 ? <ProductLowStockWarning stock={product.stock} /> : null}
       </div>
     </Link>
   );

@@ -37,13 +37,7 @@ export function Header() {
           </div>
         </div>
 
-        <Image
-          src="/prince-akachi-LWkFHEGpleE-unsplash.jpg"
-          className="rounded-full"
-          width={40}
-          height={40}
-          alt="User"
-        />
+        <Image src="/prince-akachi-LWkFHEGpleE-unsplash.jpg" className="rounded-full" width={40} height={40} alt="User" />
       </div>
     </div>
   );

@@ -22,14 +22,10 @@ export default function Page() {
               key={item.name}
               className="group block space-y-1.5 rounded-lg bg-gray-900 px-5 py-3 hover:bg-gray-800"
             >
-              <div className="font-medium text-gray-200 group-hover:text-gray-50">
-                {item.name}
-              </div>
+              <div className="font-medium text-gray-200 group-hover:text-gray-50">{item.name}</div>
 
               {item.description ? (
-                <div className="line-clamp-3 text-sm text-gray-400 group-hover:text-gray-300">
-                  {item.description}
-                </div>
+                <div className="line-clamp-3 text-sm text-gray-400 group-hover:text-gray-300">{item.description}</div>
               ) : null}
             </Link>
           );
@@ -37,9 +33,7 @@ export default function Page() {
       </div>
 
       <div className="flex gap-2">
-        <ExternalLink href="https://github.com/vercel/app-playground/tree/main/app/snippets">
-          Code
-        </ExternalLink>
+        <ExternalLink href="https://github.com/vercel/app-playground/tree/main/app/snippets">Code</ExternalLink>
       </div>
     </div>
   );

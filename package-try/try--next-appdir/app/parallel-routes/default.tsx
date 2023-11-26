@@ -9,9 +9,8 @@ export default function Default() {
         <h2 className="text-lg font-bold">Default UI</h2>
 
         <p>
-          Default UI is rendered because the implicit <code>@children</code>{' '}
-          slot <strong>does not</strong> contain a route segment that matches
-          the current{' '}
+          Default UI is rendered because the implicit <code>@children</code> slot <strong>does not</strong> contain a route segment that
+          matches the current{' '}
           <code>
             /<CurrentRoute slice={1} />
           </code>{' '}
@@ -35,8 +34,7 @@ export default function Default() {
           </li>
 
           <li>
-            <code>parallel-routes/default.js</code> OR{' '}
-            <code>parallel-routes/@children/default.js</code> exists.
+            <code>parallel-routes/default.js</code> OR <code>parallel-routes/@children/default.js</code> exists.
           </li>
         </ul>
 

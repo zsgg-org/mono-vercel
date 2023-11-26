@@ -1,13 +1,7 @@
 'use client';
 
 import { Boundary } from '#/ui/boundary';
-import {
-  useParams,
-  usePathname,
-  useSearchParams,
-  useSelectedLayoutSegment,
-  useSelectedLayoutSegments,
-} from 'next/navigation';
+import { useParams, usePathname, useSearchParams, useSelectedLayoutSegment, useSelectedLayoutSegments } from 'next/navigation';
 
 export function HooksClient() {
   const pathname = usePathname();
@@ -24,9 +18,7 @@ export function HooksClient() {
             {
               useParams: params,
               usePathname: pathname,
-              useSearchParams: searchParams
-                ? Object.fromEntries(searchParams.entries())
-                : {},
+              useSearchParams: searchParams ? Object.fromEntries(searchParams.entries()) : {},
               useSelectedLayoutSegment: selectedLayoutSegment,
               useSelectedLayoutSegments: selectedLayoutSegments,
             },

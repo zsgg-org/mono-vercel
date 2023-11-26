@@ -3,4 +3,4 @@
 
 #yarn run test:unit:hello
 #yarn run test:unit:recipes
-yarn lint-staged
+#yarn lint-staged

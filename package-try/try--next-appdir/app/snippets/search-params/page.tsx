@@ -31,12 +31,9 @@ export default async function Page({ searchParams }: { searchParams: any }) {
         Updating <code>searchParams</code>
       </h1>
       <p>
-        The <code>useSearchParams</code> hook returns a read only version of{' '}
-        <code>URLSearchParams</code>. You can use{' '}
-        <code>useRouter&#40;&#41;</code> or <code>&lt;Link&gt;</code> to set new{' '}
-        <code>searchParams</code>. After a navigation is performed, the current{' '}
-        <code>page.js</code> will receive an updated <code>searchParams</code>{' '}
-        prop.
+        The <code>useSearchParams</code> hook returns a read only version of <code>URLSearchParams</code>. You can use{' '}
+        <code>useRouter&#40;&#41;</code> or <code>&lt;Link&gt;</code> to set new <code>searchParams</code>. After a navigation is performed,
+        the current <code>page.js</code> will receive an updated <code>searchParams</code> prop.
       </p>
       <div className="mt-12 space-y-12">
         <div className="space-y-4">
@@ -50,9 +47,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
             </Suspense>
           </Boundary>
 
-          <ExternalLink href="https://nextjs.org/docs/app/api-reference/functions/use-search-params">
-            Docs
-          </ExternalLink>
+          <ExternalLink href="https://nextjs.org/docs/app/api-reference/functions/use-search-params">Docs</ExternalLink>
         </div>
 
         <div className="space-y-4">
@@ -79,11 +74,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
                         const params = new URLSearchParams(searchParams);
                         params.set(option.value, item);
                         return (
-                          <ActiveLink
-                            key={item}
-                            isActive={isActive}
-                            searchParams={params.toString()}
-                          >
+                          <ActiveLink key={item} isActive={isActive} searchParams={params.toString()}>
                             {item}
                           </ActiveLink>
                         );
@@ -95,9 +86,7 @@ export default async function Page({ searchParams }: { searchParams: any }) {
             </div>
           </Boundary>
 
-          <ExternalLink href="https://nextjs.org/docs/app/api-reference/file-conventions/page">
-            Docs
-          </ExternalLink>
+          <ExternalLink href="https://nextjs.org/docs/app/api-reference/file-conventions/page">Docs</ExternalLink>
         </div>
       </div>
     </div>

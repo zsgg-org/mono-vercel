@@ -15,13 +15,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <>
       <div className="prose prose-sm prose-invert mb-8 max-w-none">
         <ul>
+          <li>Primary product information is loaded first as part of the initial response.</li>
           <li>
-            Primary product information is loaded first as part of the initial
-            response.
-          </li>
-          <li>
-            Secondary, more personalized details (that might be slower) like
-            ship date, other recommended products, and customer reviews are
+            Secondary, more personalized details (that might be slower) like ship date, other recommended products, and customer reviews are
             progressively streamed in.
           </li>
           <li>Try refreshing or navigating to other recommended products.</li>

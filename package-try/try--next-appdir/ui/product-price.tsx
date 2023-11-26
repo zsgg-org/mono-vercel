@@ -8,10 +8,7 @@ function isDiscount(obj: any): obj is { percent: number; expires?: number } {
   return typeof obj?.percent === 'number';
 }
 
-function formatDiscount(
-  price: Dinero<number>,
-  discountRaw: Product['discount'],
-) {
+function formatDiscount(price: Dinero<number>, discountRaw: Product['discount']) {
   return isDiscount(discountRaw)
     ? {
         amount: multiply(price, {
@@ -23,13 +20,7 @@ function formatDiscount(
     : undefined;
 }
 
-export const ProductPrice = ({
-  price,
-  discount: discountRaw,
-}: {
-  price: Dinero<number>;
-  discount: Product['discount'];
-}) => {
+export const ProductPrice = ({ price, discount: discountRaw }: { price: Dinero<number>; discount: Product['discount'] }) => {
   const discount = formatDiscount(price, discountRaw);
 
   if (discount) {
@@ -44,9 +35,7 @@ export const ProductPrice = ({
       <div className="text-sm leading-snug text-white">
         <ProductCurrencySymbol dinero={price} />
       </div>
-      <div className="text-lg font-bold leading-snug text-white">
-        {toUnit(price)}
-      </div>
+      <div className="text-lg font-bold leading-snug text-white">{toUnit(price)}</div>
     </div>
   );
 };

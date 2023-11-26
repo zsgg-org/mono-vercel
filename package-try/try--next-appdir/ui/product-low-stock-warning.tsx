@@ -7,7 +7,5 @@ export const ProductLowStockWarning = ({ stock }: { stock: number }) => {
     return <div className="text-vercel-cyan text-sm">Out of stock</div>;
   }
 
-  return (
-    <div className="text-vercel-cyan text-sm">Only {stock} left in stock</div>
-  );
+  return <div className="text-vercel-cyan text-sm">Only {stock} left in stock</div>;
 };

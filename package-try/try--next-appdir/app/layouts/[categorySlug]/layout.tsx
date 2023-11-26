@@ -2,13 +2,7 @@ import { getCategories, getCategory } from '#/app/api/categories/getCategories';
 import { ClickCounter } from '#/ui/click-counter';
 import { TabGroup } from '#/ui/tab-group';
 
-export default async function Layout({
-  children,
-  params,
-}: {
-  children: React.ReactNode;
-  params: { categorySlug: string };
-}) {
+export default async function Layout({ children, params }: { children: React.ReactNode; params: { categorySlug: string } }) {
   const category = await getCategory({ slug: params.categorySlug });
   const categories = await getCategories({ parent: params.categorySlug });
 

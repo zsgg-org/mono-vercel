@@ -7,13 +7,9 @@ export default function Page() {
         <h1 className="text-xl font-bold">Client Component Hooks</h1>
 
         <ul>
+          <li>Next.js provides a number of hooks for accessing routing information from client components.</li>
           <li>
-            Next.js provides a number of hooks for accessing routing information
-            from client components.
-          </li>
-          <li>
-            Try navigating each page and observing the output of each hook
-            called from the current routes <code>layout.js</code> and{' '}
+            Try navigating each page and observing the output of each hook called from the current routes <code>layout.js</code> and{' '}
             <code>page.js</code> files.
           </li>
         </ul>
@@ -22,9 +18,7 @@ export default function Page() {
           <ExternalLink href="https://nextjs.org/docs/app/building-your-application/data-fetching/fetching#revalidating-data">
             Docs
           </ExternalLink>
-          <ExternalLink href="https://github.com/vercel/app-playground/tree/main/app/hooks">
-            Code
-          </ExternalLink>
+          <ExternalLink href="https://github.com/vercel/app-playground/tree/main/app/hooks">Code</ExternalLink>
         </div>
       </div>
     </div>
