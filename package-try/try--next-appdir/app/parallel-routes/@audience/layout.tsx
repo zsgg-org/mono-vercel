@@ -12,12 +12,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               text: 'Home',
             },
             {
-              text: 'Demographics',
               slug: 'demographics',
+              text: 'Demographics',
             },
             {
-              text: 'Subscribers',
               slug: 'subscribers',
+              text: 'Subscribers',
             },
           ]}
         />

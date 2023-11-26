@@ -22,8 +22,8 @@ export function HooksClient() {
         <pre>
           {JSON.stringify(
             {
-              usePathname: pathname,
               useParams: params,
+              usePathname: pathname,
               useSearchParams: searchParams
                 ? Object.fromEntries(searchParams.entries())
                 : {},

@@ -26,11 +26,11 @@ export default async function Layout({
                 text: 'Home',
               },
               ...categories.map((x) => ({
-                text: x.name,
                 slug: x.slug,
+                text: x.name,
               })),
-              { text: 'Checkout', slug: 'checkout' },
-              { text: 'Blog', slug: 'blog' },
+              { slug: 'checkout', text: 'Checkout' },
+              { slug: 'blog', text: 'Blog' },
             ]}
           />
 

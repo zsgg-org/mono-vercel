@@ -7,11 +7,11 @@ import React from 'react';
 const title = 'Hooks';
 
 export const metadata = {
-  title,
   openGraph: {
-    title,
     images: [`/api/og?title=${title}`],
+    title,
   },
+  title,
 };
 
 export default async function Layout({
@@ -31,8 +31,8 @@ export default async function Layout({
               text: 'Home',
             },
             ...categories.map((x) => ({
-              text: x.name,
               slug: x.slug,
+              text: x.name,
             })),
           ]}
         />

@@ -21,29 +21,29 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
       (
         <div
           style={{
-            position: 'relative',
+            alignItems: 'center',
             display: 'flex',
             justifyContent: 'center',
-            alignItems: 'center',
+            position: 'relative',
           }}
         >
           {isLight ? <LightSvg /> : <DarkSvg />}
           <div
             style={{
-              position: 'absolute',
+              color: isLight ? 'black' : 'white',
               fontFamily: 'Inter',
               fontSize: '48px',
               fontWeight: '600',
-              letterSpacing: '-0.04em',
-              color: isLight ? 'black' : 'white',
-              top: '250px',
               left: '50%',
+              letterSpacing: '-0.04em',
+              maxWidth: '750px',
+              overflowWrap: 'break-word',
+              position: 'absolute',
+              textAlign: 'center',
+              top: '250px',
               transform: 'translateX(-50%)',
               whiteSpace: 'pre-wrap',
-              maxWidth: '750px',
-              textAlign: 'center',
               wordWrap: 'break-word',
-              overflowWrap: 'break-word',
             }}
           >
             {title}
@@ -51,16 +51,16 @@ export async function GET(req: NextRequest): Promise<Response | ImageResponse> {
         </div>
       ),
       {
-        width: 843,
-        height: 441,
         fonts: [
           {
-            name: 'Inter',
             data: await interSemiBold,
+            name: 'Inter',
             style: 'normal',
             weight: 400,
           },
         ],
+        height: 441,
+        width: 843,
       },
     );
   } catch (e) {

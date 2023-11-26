@@ -9,8 +9,8 @@ export async function GET(request: NextRequest) {
   revalidateTag(collection);
   console.log('revalidated', path, collection);
   return NextResponse.json({
-    revalidated: true,
-    now: Date.now(),
     cache: 'no-store',
+    now: Date.now(),
+    revalidated: true,
   });
 }

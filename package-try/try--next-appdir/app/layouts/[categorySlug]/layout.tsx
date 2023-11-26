@@ -22,8 +22,8 @@ export default async function Layout({
               text: 'All',
             },
             ...categories.map((x) => ({
-              text: x.name,
               slug: x.slug,
+              text: x.name,
             })),
           ]}
         />

@@ -28,12 +28,12 @@ export default async function Layout({
                 text: 'All',
               },
               ...categories.map((x) => ({
-                text: x.name,
                 slug: x.slug,
+                text: x.name,
               })),
               {
-                text: 'Subcategory That Does Not Exist',
                 slug: 'does-not-exist',
+                text: 'Subcategory That Does Not Exist',
               },
             ]}
           />

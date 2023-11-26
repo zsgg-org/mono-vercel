@@ -3,9 +3,9 @@ import Link from 'next/link';
 
 const items = [
   {
+    description: 'Update searchParams using `useRouter` and `<Link>`',
     name: 'Updating searchParams',
     slug: 'search-params',
-    description: 'Update searchParams using `useRouter` and `<Link>`',
   },
 ];
 

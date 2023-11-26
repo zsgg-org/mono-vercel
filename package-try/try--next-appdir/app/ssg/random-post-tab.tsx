@@ -14,7 +14,7 @@ export function RandomPostTab({ path }: { path: string }) {
 
   useEffect(() => {
     const randomId = String(randomNumber(3, 100));
-    setPost({ text: `Post ${randomId} (On Demand)`, slug: randomId });
+    setPost({ slug: randomId, text: `Post ${randomId} (On Demand)` });
   }, []);
 
   return (
@@ -25,7 +25,7 @@ export function RandomPostTab({ path }: { path: string }) {
       })}
     >
       {post ? (
-        <Tab path={path} item={{ text: post.text, slug: post.slug }} />
+        <Tab path={path} item={{ slug: post.slug, text: post.text }} />
       ) : null}
     </div>
   );

@@ -4,33 +4,33 @@ import React from 'react';
 const title = 'Styling';
 
 export const metadata = {
-  title,
   openGraph: {
-    title,
     images: [`/api/og?title=${title}`],
+    title,
   },
+  title,
 };
 
 const items = [
   {
-    text: 'Global CSS',
     slug: 'global-css',
+    text: 'Global CSS',
   },
   {
-    text: 'CSS Modules',
     slug: 'css-modules',
+    text: 'CSS Modules',
   },
   {
-    text: 'Styled Components',
     slug: 'styled-components',
+    text: 'Styled Components',
   },
   {
-    text: 'Styled JSX',
     slug: 'styled-jsx',
+    text: 'Styled JSX',
   },
   {
-    text: 'Tailwind CSS',
     slug: 'tailwind',
+    text: 'Tailwind CSS',
   },
 ];
 

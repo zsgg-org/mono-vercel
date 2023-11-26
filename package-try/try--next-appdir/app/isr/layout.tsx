@@ -4,11 +4,11 @@ import React from 'react';
 const title = 'Incremental Static Regeneration (ISR)';
 
 export const metadata = {
-  title,
   openGraph: {
-    title,
     images: [`/api/og?title=${title}`],
+    title,
   },
+  title,
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
@@ -23,8 +23,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             text: 'Home',
           },
           ...ids.map((x) => ({
-            text: `Post ${x.id}`,
             slug: x.id,
+            text: `Post ${x.id}`,
           })),
         ]}
       />

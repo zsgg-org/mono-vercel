@@ -12,11 +12,11 @@ const CountUp = ({
   duration?: number;
 }) => {
   const { value } = useCountUp({
-    isCounting: true,
-    end,
-    start,
-    duration,
     decimalPlaces: 1,
+    duration,
+    end,
+    isCounting: true,
+    start,
   });
 
   return <span>{value}</span>;

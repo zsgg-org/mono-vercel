@@ -29,10 +29,11 @@ const List = ({ items, depth }: { items: Item[]; depth: number }) => {
                     // ──
                     'after:absolute after:-left-2.5 after:top-[17px] after:h-3 after:w-2.5 after:border-t-2 after:border-gray-800',
                     {
-                      // ├─
-                      'before:h-full': !isLast,
                       // └─
                       'before:h-[17px]': isLast,
+
+                      // ├─
+                      'before:h-full': !isLast,
                     },
                   )
             }
@@ -42,8 +43,8 @@ const List = ({ items, depth }: { items: Item[]; depth: number }) => {
                 className={clsx(
                   'rounded-md px-2 py-0.5 text-xs tracking-wide',
                   {
-                    'bg-vercel-blue text-blue-100': item.type === 'client',
                     'bg-gray-700 text-gray-200': item.type === 'server',
+                    'bg-vercel-blue text-blue-100': item.type === 'client',
                   },
                 )}
               >

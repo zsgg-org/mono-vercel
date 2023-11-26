@@ -6,19 +6,19 @@ import Client from './client';
 
 const options = [
   {
+    items: ['asc', 'desc'],
     name: 'Sort',
     value: 'sort',
-    items: ['asc', 'desc'],
   },
   {
+    items: ['1', '2', '3'],
     name: 'Page',
     value: 'page',
-    items: ['1', '2', '3'],
   },
   {
+    items: ['10', '25', '100'],
     name: 'Items Per Page',
     value: 'perPage',
-    items: ['10', '25', '100'],
   },
 ];
 

@@ -8,11 +8,11 @@ import ContextClickCounter from './context-click-counter';
 const title = 'Client Context';
 
 export const metadata = {
-  title,
   openGraph: {
-    title,
     images: [`/api/og?title=${title}`],
+    title,
   },
+  title,
 };
 
 export default async function Layout({
@@ -48,8 +48,8 @@ export default async function Layout({
                       text: 'Home',
                     },
                     ...categories.map((x) => ({
-                      text: x.name,
                       slug: x.slug,
+                      text: x.name,
                     })),
                   ]}
                 />

@@ -9,8 +9,8 @@ export function RenderingPageSkeleton() {
       </div>
       <div className="-order-1 col-span-full lg:order-none lg:col-span-2">
         <div className={`space-y-3 rounded-lg bg-gray-900 p-3 ${shimmer}`}>
-          <div className="h-5 rounded-lg bg-gray-700 lg:h-10"></div>
-          <div className="h-6 w-16 rounded-full bg-gray-300"></div>
+          <div className="h-5 rounded-lg bg-gray-700 lg:h-10" />
+          <div className="h-6 w-16 rounded-full bg-gray-300" />
         </div>
       </div>
     </div>

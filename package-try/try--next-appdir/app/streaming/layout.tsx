@@ -4,11 +4,11 @@ import React from 'react';
 const title = 'Streaming';
 
 export const metadata = {
-  title,
   openGraph: {
-    title,
     images: [`/api/og?title=${title}`],
+    title,
   },
+  title,
 };
 
 export default async function Layout({
@@ -26,14 +26,14 @@ export default async function Layout({
               text: 'Home',
             },
             {
-              text: 'Edge Runtime',
-              slug: 'edge/product/1',
               segment: 'edge',
+              slug: 'edge/product/1',
+              text: 'Edge Runtime',
             },
             {
-              text: 'Node Runtime',
-              slug: 'node/product/1',
               segment: 'node',
+              slug: 'node/product/1',
+              text: 'Node Runtime',
             },
           ]}
         />
