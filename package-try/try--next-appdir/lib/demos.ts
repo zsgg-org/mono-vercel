@@ -6,101 +6,107 @@ export type Item = {
 
 export const demos: { name: string; items: Item[] }[] = [
   {
-    name: 'Layouts',
     items: [
       {
+        description: 'Create UI that is shared across routes',
         name: 'Nested Layouts',
         slug: 'layouts',
-        description: 'Create UI that is shared across routes',
       },
       {
+        description: 'Organize routes without affecting URL paths',
         name: 'Grouped Layouts',
         slug: 'route-groups',
-        description: 'Organize routes without affecting URL paths',
       },
       {
+        description: 'Render multiple pages in the same layout',
         name: 'Parallel Routes',
         slug: 'parallel-routes',
-        description: 'Render multiple pages in the same layout',
       },
     ],
+    name: 'Layouts',
   },
   {
-    name: 'File Conventions',
     items: [
       {
-        name: 'Loading',
-        slug: 'loading',
         description:
           'Create meaningful Loading UI for specific parts of an app',
+        name: 'Loading',
+        slug: 'loading',
       },
       {
+        description: 'Create Error UI for specific parts of an app',
         name: 'Error',
         slug: 'error-handling',
-        description: 'Create Error UI for specific parts of an app',
       },
       {
+        description: 'Create Not Found UI for specific parts of an app',
         name: 'Not Found',
         slug: 'not-found',
-        description: 'Create Not Found UI for specific parts of an app',
       },
     ],
+    name: 'File Conventions',
   },
   {
-    name: 'Data Fetching',
     items: [
       {
-        name: 'Streaming with Suspense',
-        slug: 'streaming',
         description:
           'Streaming data fetching from the server with React Suspense',
+        name: 'Streaming with Suspense',
+        slug: 'streaming',
       },
       {
+        description:
+          'Streaming data fetching from the server with React Suspense',
+        name: 'Streaming with Suspense Cache',
+        slug: 'streaming-cache',
+      },
+      {
+        description: 'Generate static pages',
         name: 'Static Data',
         slug: 'ssg',
-        description: 'Generate static pages',
       },
       {
+        description: 'Server-render pages',
         name: 'Dynamic Data',
         slug: 'ssr',
-        description: 'Server-render pages',
       },
       {
+        description: 'Get the best of both worlds between static & dynamic',
         name: 'Incremental Static Regeneration',
         slug: 'isr',
-        description: 'Get the best of both worlds between static & dynamic',
       },
     ],
+    name: 'Data Fetching',
   },
   {
-    name: 'Components',
     items: [
       {
-        name: 'Client Context',
-        slug: 'context',
         description:
           'Pass context between Client Components that cross Server/Client Component boundary',
+        name: 'Client Context',
+        slug: 'context',
       },
     ],
+    name: 'Components',
   },
   {
-    name: 'Misc',
     items: [
       {
+        description: 'Preview the routing hooks available in Client Components',
         name: 'Client Component Hooks',
         slug: 'hooks',
-        description: 'Preview the routing hooks available in Client Components',
       },
       {
+        description: 'Preview the supported styling solutions',
         name: 'CSS and CSS-in-JS',
         slug: 'styling',
-        description: 'Preview the supported styling solutions',
       },
       {
+        description: 'A collection of useful App Router code snippets',
         name: 'Code Snippets',
         slug: 'snippets',
-        description: 'A collection of useful App Router code snippets',
       },
     ],
+    name: 'Misc',
   },
 ];
