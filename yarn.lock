@@ -13372,6 +13372,34 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"try--next-cookie-site-1@workspace:package-try/try--next-cookie-site-1":
+  version: 0.0.0-use.local
+  resolution: "try--next-cookie-site-1@workspace:package-try/try--next-cookie-site-1"
+  dependencies:
+    "@types/node": 20.5.1
+    "@types/react": 18.2.20
+    "@types/react-dom": 18.2.7
+    next: 13.4.19
+    react: 18.2.0
+    react-dom: 18.2.0
+    typescript: 5.1.6
+  languageName: unknown
+  linkType: soft
+
+"try--next-cookie-site-2@workspace:package-try/try--next-cookie-site-2":
+  version: 0.0.0-use.local
+  resolution: "try--next-cookie-site-2@workspace:package-try/try--next-cookie-site-2"
+  dependencies:
+    "@types/node": 20.5.1
+    "@types/react": 18.2.20
+    "@types/react-dom": 18.2.7
+    next: 13.4.19
+    react: 18.2.0
+    react-dom: 18.2.0
+    typescript: 5.1.6
+  languageName: unknown
+  linkType: soft
+
 "ts-api-utils@npm:^1.0.1":
   version: 1.0.1
   resolution: "ts-api-utils@npm:1.0.1"

@@ -28,6 +28,14 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         "reference": "workspace:package-try/try--next-blog-starter"\
       },\
       {\
+        "name": "try--next-cookie-site-1",\
+        "reference": "workspace:package-try/try--next-cookie-site-1"\
+      },\
+      {\
+        "name": "try--next-cookie-site-2",\
+        "reference": "workspace:package-try/try--next-cookie-site-2"\
+      },\
+      {\
         "name": "hello--exports",\
         "reference": "workspace:package/hello--exports"\
       }\
@@ -39,7 +47,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
       ["root-workspace-0b6124", ["workspace:."]],\
       ["try--next-appdir-322e97", ["workspace:package-try/try--next-appdir"]],\
       ["try--next-basic", ["workspace:package-try/try--next-basic"]],\
-      ["try--next-blog-starter", ["workspace:package-try/try--next-blog-starter"]]\
+      ["try--next-blog-starter", ["workspace:package-try/try--next-blog-starter"]],\
+      ["try--next-cookie-site-1", ["workspace:package-try/try--next-cookie-site-1"]],\
+      ["try--next-cookie-site-2", ["workspace:package-try/try--next-cookie-site-2"]]\
     ],\
     "fallbackPool": [\
     ],\
@@ -16946,6 +16956,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["remark-html", "npm:15.0.2"],\
             ["tailwindcss", "npm:3.3.3"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=289587"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["try--next-cookie-site-1", [\
+        ["workspace:package-try/try--next-cookie-site-1", {\
+          "packageLocation": "./package-try/try--next-cookie-site-1/",\
+          "packageDependencies": [\
+            ["try--next-cookie-site-1", "workspace:package-try/try--next-cookie-site-1"],\
+            ["@types/node", "npm:20.5.1"],\
+            ["@types/react", "npm:18.2.20"],\
+            ["@types/react-dom", "npm:18.2.7"],\
+            ["next", "virtual:2addf9f9dedeafbbdb79085b6b8f6dfb9c2a4f5ae3c99b26f8c28852b4c0b56550e7bd44f168b203af0980127c2d9542243121d70257cb04604419d61903662f#npm:13.4.19"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:2addf9f9dedeafbbdb79085b6b8f6dfb9c2a4f5ae3c99b26f8c28852b4c0b56550e7bd44f168b203af0980127c2d9542243121d70257cb04604419d61903662f#npm:18.2.0"],\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
+          ],\
+          "linkType": "SOFT"\
+        }]\
+      ]],\
+      ["try--next-cookie-site-2", [\
+        ["workspace:package-try/try--next-cookie-site-2", {\
+          "packageLocation": "./package-try/try--next-cookie-site-2/",\
+          "packageDependencies": [\
+            ["try--next-cookie-site-2", "workspace:package-try/try--next-cookie-site-2"],\
+            ["@types/node", "npm:20.5.1"],\
+            ["@types/react", "npm:18.2.20"],\
+            ["@types/react-dom", "npm:18.2.7"],\
+            ["next", "virtual:2addf9f9dedeafbbdb79085b6b8f6dfb9c2a4f5ae3c99b26f8c28852b4c0b56550e7bd44f168b203af0980127c2d9542243121d70257cb04604419d61903662f#npm:13.4.19"],\
+            ["react", "npm:18.2.0"],\
+            ["react-dom", "virtual:2addf9f9dedeafbbdb79085b6b8f6dfb9c2a4f5ae3c99b26f8c28852b4c0b56550e7bd44f168b203af0980127c2d9542243121d70257cb04604419d61903662f#npm:18.2.0"],\
+            ["typescript", "patch:typescript@npm%3A5.1.6#~builtin<compat/typescript>::version=5.1.6&hash=5da071"]\
           ],\
           "linkType": "SOFT"\
         }]\
